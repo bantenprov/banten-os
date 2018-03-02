@@ -10,10 +10,12 @@ Site ini dibangun dengan [hexo](http://hexo.io/). Konten site ditulis dengan for
 
 ## Developing
 
-Start a dev server at `localhost:4000`:
-
+```
+git clone https://github.com/bantenprov/banten-os.git
+cd banten-os
+```
 ```
 $ npm install -g hexo-cli
 $ npm install
-$ hexo server
+$ hexo server / hexo generate
 ```
