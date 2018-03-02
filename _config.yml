@@ -1,40 +1,116 @@
+# Site
 title: BantOS
-subtitle: "Operation System for Banten E-Government, Banten Education"
-description: "BantOS adalah distro Linux turunan debian yang dikembangkan oleh Tim Developer Banten. Dengan mewujudkan Banten Open Source, BantOS dikembangkan secara terbuka dan bersama-sama untuk menghasilkan distro Linux pemrograman untuk Pemerintahan, Pendidikan"
-author: Tim Developer Banten
-language: en
-timezone: UTC
+subtitle: Linux BantOS
+description: Distribusi Linux BantOS
+author: DevBanten - Tim Developer Banten 
+email: admin@dev.bantenprov.go.id
+language: [id, en]
+i18n:
+  type: [page, post]
+  generator: [index]
 
-url: http://linux.dev.bantenprov.go.id
+timezone: Asia/Jakarta
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://linux.dev.bantenprov.go.id
 root: /
-permalink: news/:year/:month/:day/:title/
-archive_dir: news
+permalink: :year/:month/:day/:title/
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
 code_dir: downloads/code
-new_post_name: :year-:month-:day-:title.md # File name of new posts
-post_asset_folder: true
-per_page: 0
+i18n_dir: :lang
 
-theme: navy
-deploy:
-  type: git
-  repo: git@github.com:bairahmat/site_hexo.git
+# Directory
+source_dir: src
+public_dir: public
 
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+auto_spacing: false # Add spaces between asian characters and western characters
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+max_open_file: 100
+multi_thread: true
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
 highlight:
   enable: true
   line_number: false
+  tab_replace:
 
-disqus_shortname: 
-google_analytics: 
-fb_admins: 
-algolia:
-  en:
-    api_key: c3d5d4c995b5e0c2ffb5623900279a66
-    index_name: hexo
-  zh-tw:
-    api_key: c83d2ec3440f40aec6d0e695ecec7ef3
-    index_name: hexo_zh-tw
-  zh-cn:
-    api_key: cdea7d4e47d84f6145b77e7f68689f35
-    index_name: hexo_zh-cn
-twitter: devBanten
-github: bairahmat/site_hexo
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 0
+category: 0
+tag: 0
+
+# Server
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+port: 4000
+logger: false
+logger_format:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: MMM D YYYY
+time_format: H:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Disqus
+disqus_shortname:
+
+# Extensions
+## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
+## Themes: https://github.com/tommy351/hexo/wiki/Themes
+theme: vue
+exclude_generator:
+
+# Markdown
+## https://github.com/chjj/marked
+markdown:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+# Deployment
+## Docs: http://zespia.tw/hexo/docs/deployment.html
+deploy:
+  type: git
+  # repo: https://github.com/tealinuxos/tealinuxos.github.io.git
+  repo: git@github.com:tealinuxos/tealinuxos.github.io.git
+  message: "Website terakhir diperbaharui pada : {{ now('YYYY-MM-DD HH:mm:ss') }}"
+
+cname: tealinuxos.org
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+alias:
+
+sitemap:
+    path: sitemap.xml

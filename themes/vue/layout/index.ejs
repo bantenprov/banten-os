@@ -1,0 +1,142 @@
+<div class="sidebar">
+  <ul class="main-menu">
+    <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+  </ul>
+</div>
+
+<div id="hero" class="tea-hero">
+  <div class="inner">
+    <div class="left">
+      <img class="hero-logo zoom-in-out" src="<%- url_for('/images/launcher.png') %>">
+    </div><div class="right">
+      <!-- <h2 class="vue" style="color:white;">Linux BantOS</h2> -->
+      <h1>
+        <br>
+        <%= __('index.slogan') %>
+      </h1>
+      <p>
+        <a class="button" href="http://linux.dev.bantenprov.go.id/iso/bantos.iso"><%= __('index.tombol-download2') %></a>
+        <!-- <a class="button white" href="<%- url_for_lang('/panduan') %>"><%= __('index.tombol-lihat') %></a> -->
+      </p>
+    </div>
+  </div>
+</div>
+<div id="highlights">
+  <div class="inner">
+    <div class="description">
+      <!-- <h1>Linux BantOS</h1> -->
+      <div class="row center-xs">
+          <div class="col-sm-4 col-xs-8">
+              <img class="responsive" src="<%- url_for('/images/text-tealinuxos.png') %>" alt="">
+          </div>
+      </div>
+      <p>
+          <%= __('index.adalah') %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="highlights">
+  <div class="inner">
+    <div class="point">
+      <span class="icon-umbrella"></span>
+      <h2>Open Source Software<span class="tulis-teh"><span class="tulis-teh"></span></span></h2>
+      <p>The opensource has come true, this is the time to revenge.</p>
+    </div>
+
+    <div class="point">
+      <span class="icon-diamond"></span>
+      <h2>Distro Debian Linux<span class="tulis-teh"></span></h2>
+      <p>Berangkat dari dukungan dari semua pihak sistem operasi ini mengalami penyempurnaan mejadi sistem operasi yang stabil dan berkualitas.</p>
+    </div>
+
+    <div class="point">
+      <span class="icon-globe-alt"></span>
+      <h2>Komunitas Linux <span class="tulis-teh"></span></h2>
+      <p>
+        Dukungan kuat dari forum dan komunitas dunia virtual maupun komunitas riil menjadikan sistem operasi ini berkembang cepat.
+      </p>
+    </div>
+    <div class="point">
+      <span class="icon-chemistry"></span>
+      <h2>Repository Lokal<span class="tulis-teh"></span></h2>
+      <p>
+        Dukungan yang kuat dan tersedianya repository lokal yang lengkap menjadikan sistem operasi ini penuh nutrisi.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="feature">
+  <div class="row" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="box-nested right">
+        <h1>< Dari Development Banten, untuk E-Government /></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="box-nested left-side">
+        <h2>Instalasi Mudah</h2>
+        <p>
+          Instalasi BantOS sangat mudah, pengguna juga dapat memasang aplikasi dengan mudah, cepat dan offline.
+          <br/>
+          Cukup pasang, hanya yang kamu butuhkan.
+        </p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="box-nested right-side">
+        <img src="<%- url_for('/images/install-8.png') %>" alt="Tea Module Installer"/>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="box-nested left-side">
+      <img src="<%- url_for_lang('/images/desktop-bantos.png') %>" alt="Tea Module Installer"/>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="box-nested right-side">
+          <h2>Themes Bersahabat</h2>
+          <p>
+            Secara bawaan, BantOS memiliki tema bersahabat bagi pengguna linux pemula.
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div id="sponsors">
+  <div class="inner">
+    <h2>Dapatkan Linux BantOS dengan gratis, <br></h2>
+    <!-- <h3>Dukungan BY</h3> -->
+    <!-- <%- partial('partials/sponsors') %> -->
+    <a class="become-sponsor button white" href="http://www.bantenprov.go.id">Pemprov Banten</a>
+    <a class="become-sponsor button white" href="<%- url_for_lang('/kontribusi') %>">Ikut Kontribusi</a>
+  </div>
+</div>
+
+
+<div id="footer">
+  Released under the <a href="https://opensource.org/licenses/MIT" href="_blank">MIT License</a><br>
+  2017-<%- new Date().getFullYear() %> Maintenance by <a href="http://dev.bantenprov.go.id">Development Banten</a>
+</div>
+
+<script>
+var topScrolled = false
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 165 && !topScrolled) {
+    topScrolled = true
+    document.getElementById('mobile-bar').classList.remove('top')
+  } else if (window.pageYOffset <= 165 && topScrolled) {
+    topScrolled = false
+    document.getElementById('mobile-bar').classList.add('top')
+  }
+})
+</script>
