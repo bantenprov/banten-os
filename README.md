@@ -10,12 +10,21 @@ Site ini dibangun dengan [hexo](http://hexo.io/). Konten site ditulis dengan for
 
 ## Developing
 
+Install nodejs dan npm versi 9.x
+```
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+Install hexo
+```
+sudo npm install -g hexo-cli
+```
+Clone repo banten-os
 ```
 git clone https://github.com/bantenprov/banten-os.git
 cd banten-os
 ```
 ```
-$ npm install -g hexo-cli
 $ npm install
-$ hexo server / hexo generate
+$ hexo generate
 ```
